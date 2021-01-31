@@ -53,7 +53,7 @@ The project is an example of infrastructure for automation testing of different 
 ### Tests Execution:
 > Each of the applications has a few tests for demonstration purpose.
 These tests can be developed in a very simple way, due to a lot of work with the infrastructure.
-[[Sanity Tests]](https://github.com/sashka999/FullStackFinalProject/tree/master/src/test/java/SanityTests)
+
 
 ### _Known Issues:_
 Sometimes can be conflicts with some dependencies the applications are using.
