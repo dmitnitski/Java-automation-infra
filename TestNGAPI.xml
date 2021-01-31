@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Web Suite" parallel="false" thread-count = "2">
+    <listeners>
+        <listener class-name="utilities.Listeners"/>
+    </listeners>
+    <test name="API test">
+        <parameter name="PlatformName" value="api"></parameter>
+        <classes>
+            <class name="sanity.GrafanaApi">
+<!--                <methods>-->
+<!--                    <exclude name="test05_verifyProgressSteps"/>-->
+<!--                    <exclude name="test06_searchUsers"/>-->
+<!--                </methods>-->
+            </class>
+        </classes>
+    </test>
+</suite>

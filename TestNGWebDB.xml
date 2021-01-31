@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Web Suite" parallel="false" thread-count = "2">
+    <listeners>
+        <listener class-name="utilities.Listeners"/>
+    </listeners>
+    <test name="Web test">
+        <parameter name="PlatformName" value="web"></parameter>
+        <classes>
+            <class name="sanity.GrafanaWebDB">
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Environment>
+    <!-- Timeout -->
+    <Timeout>5</Timeout>
+
+    <!-- General -->
+<!--    <PlatformName>web</PlatformName>-->
+
+    <!-- Web -->
+    <BrowserName>chrome</BrowserName>
+    <url>http://localhost:3000/</url>
+
+    <!-- Data Driven Testing-->
+    <DDTFile>./DDTFiles/users.csv</DDTFile>
+
+    <!-- Auth -->
+    <username>admin</username>
+    <password>admin</password>
+
+    <!-- API -->
+    <APIurl>http://localhost:3000/</APIurl>
+
+    <!-- ELECTRON -->
+    <ElectronDriverPath>./Drivers/electrondriver.exe</ElectronDriverPath>
+    <ElectronAppPath>C:/Users/dmitnitzki/AppData/Local/Programs/todolist/Todolist.exe</ElectronAppPath>
+
+    <!-- DESKTOP -->
+    <CalculatorApp>Microsoft.WindowsCalculator_8wekyb3d8bbwe!App</CalculatorApp>
+
+    <!--- Mobile -->
+    <WinAppDriverServer>http://127.0.0.1:4723</WinAppDriverServer>
+
+    <!--- DataBase -->
+    <WinAppDriverServer>http://127.0.0.1:4723</WinAppDriverServer>
+    <DBUrl>jdbc:mysql://remotemysql.com:3306/KNA2GqiRq0</DBUrl>
+    <DBusername>KNA2GqiRq0</DBusername>
+    <DBpasword>VYKT09YGFr</DBpasword>
+
+</Environment>
