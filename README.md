@@ -50,9 +50,11 @@ The project is an example of infrastructure for automation testing of different 
 * REST Assured - for API testing
 * [Allure](http://allure.qatools.ru/) Reports - as the main reporting system
 
-### Tests Execution:
-> Each of the applications has a few tests for demonstration purpose.
-These tests can be developed in a very simple way, due to a lot of work with the infrastructure.
+### Automation Infrastructure requirements:
+>Web tests - Grafana web-server
+>Web API tests - grafana web-server
+>Electron - TODO-list
+>DB - web mySQL data base (/configuration/DBParameters)
 
 
 ### _Known Issues:_
