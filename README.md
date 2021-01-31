@@ -51,10 +51,10 @@ The project is an example of infrastructure for automation testing of different 
 * [Allure](http://allure.qatools.ru/) Reports - as the main reporting system
 
 ### Automation Infrastructure requirements:
->Web tests - Grafana web-server
->Web API tests - grafana web-server
->Electron - TODO-list
->DB - web mySQL data base (/configuration/DBParameters)
+* Web tests - Grafana web-server
+* Web API tests - grafana web-server
+* Electron tests - TODO-list
+* DB tests - web mySQL data base (/configuration/DBParameters)
 
 
 ### _Known Issues:_
