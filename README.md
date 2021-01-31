@@ -1,5 +1,7 @@
 ## **Full Stack Automation Final Project**
-Developing automation infrastructure from scratch using Java, Selenium, TestNG, WinAppDriver, Electron, Appium to become a part of CI/CD cycle. The Infrastructure include REST-API action, connaction to mySQL DB's, failure mechaniz, with screenshots and videos. Full integration with Jenkins, Allure report.
+Developing automation infrastructure from scratch using Java, Selenium, TestNG, WinAppDriver, Electron and Appium.
+The Infrastructure include REST-API action, connaction to mySQL DB's, failure mechanism, with screenshots and videos. 
+Full integration with Jenkins and Allure report to become a part of CI/CD cycle.
 
 ### **_This project created to demonstrate Java Automation Testing Infrastructure._**
 ***
