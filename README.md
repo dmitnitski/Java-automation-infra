@@ -52,7 +52,7 @@ The project is an example of infrastructure for automation testing of different 
 
 ### Automation Infrastructure requirements:
 * Web tests - Grafana web-server
-* Web API tests - grafana web-server
+* Web API tests - Grafana web-server
 * Electron tests - TODO-list
 * DB tests - web mySQL data base (/configuration/DBParameters)
 
