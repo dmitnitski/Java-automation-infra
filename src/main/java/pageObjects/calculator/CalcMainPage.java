@@ -7,6 +7,9 @@ public class CalcMainPage {
     @FindBy(name = "Clear")
     private WebElement btn_clear;
 
+    @FindBy(name = "Clear entry")
+    private WebElement btn_clear_entry;
+
     @FindBy(name = "One")
     private WebElement btn_1;
 
@@ -51,6 +54,10 @@ public class CalcMainPage {
 
     public WebElement getBtn_clear() {
         return btn_clear;
+    }
+
+    public WebElement getBtn_clearEntry(){
+        return btn_clear_entry;
     }
 
     public WebElement getBtn_1() {

@@ -13,7 +13,7 @@ public class CalculatorDesktop extends CommonOps {
     @Test(description = "Test01 Verify Addition Command")
     @Description("Test Calculator Addition action")
     public void test01_calcAddition() {
-        DesktopFlows.calculateAddition();
-        Verifications.verifyTextInElement(calcMain.getBtn_result(), "Display is 7");
+        DesktopFlows.calculateAddition(21, 34);
+        Verifications.verifyTextInElement(calcMain.getBtn_result(), "Display is 55");
     }
 }
