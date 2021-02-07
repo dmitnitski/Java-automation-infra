@@ -30,6 +30,7 @@
 
     <!--- Mobile -->
     <WinAppDriverServer>http://127.0.0.1:4723</WinAppDriverServer>
+    <appium_doc>"http://appium.io/docs/en/commands/device/interactions/is-locked/"</appium_doc>
 
     <!--- DataBase -->
     <WinAppDriverServer>http://127.0.0.1:4723</WinAppDriverServer>
