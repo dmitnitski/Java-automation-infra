@@ -8,15 +8,30 @@
     <artifactId>FinalProject</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>sikulix-atid-college</id>-->
-<!--            <name>Sikulix Repo ATID</name>-->
-<!--            <url>https://atidcollege.co.il/downloads/libs</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </releases>
+            <id>Experitest.repo1</id>
+            <url>http:repo.experitest.com:8010/Maven2/</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>sikulix-atid-college</id>
+            <name>Sikulix Repo ATID</name>
+            <url>https://atidcollege.co.il/downloads/libs</url>
+        </repository>
+    </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>com.experitest</groupId>
+            <artifactId>appium</artifactId>
+            <version>4.1.2</version>
+        </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>

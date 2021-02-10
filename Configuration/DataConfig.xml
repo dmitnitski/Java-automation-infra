@@ -5,7 +5,7 @@
     <Timeout>5</Timeout>
 
     <!-- General -->
-<!--    <PlatformName>web</PlatformName>-->
+    <!--    <PlatformName>web</PlatformName>-->
 
     <!-- Web -->
     <BrowserName>chrome</BrowserName>
@@ -30,7 +30,15 @@
 
     <!--- Mobile -->
     <WinAppDriverServer>http://127.0.0.1:4723</WinAppDriverServer>
-    <appium_doc>"http://appium.io/docs/en/commands/device/interactions/is-locked/"</appium_doc>
+    <UUID>"2b744bc0c51c7ece"</UUID>
+    <AppPackage>"com.shivgadhia.android.ukMortgageCalc"</AppPackage>
+    <AppActivity>".MainActivity"</AppActivity>
+    <AppiumServer>"http://localhost:4724/wd/hub"</AppiumServer>
+    <appium_doc>
+        <value1>"http://appium.io/docs/en/commands/status/"</value1>
+        <value2>"http://appium.io/docs/en/writing-running-appium/touch-actions/"</value2>
+        <value3>"https://docs.experitest.com/display/TC/additional+commands</value3>
+    </appium_doc>
 
     <!--- DataBase -->
     <WinAppDriverServer>http://127.0.0.1:4723</WinAppDriverServer>

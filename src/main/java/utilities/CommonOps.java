@@ -1,5 +1,9 @@
 package utilities;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.windows.WindowsDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.RestAssured;
@@ -20,6 +24,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.lang.reflect.Method;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -125,8 +130,18 @@ public class CommonOps extends Base{
      * Method Name: init mobile
      * Description: init mobile driver for mobile manipulations
      **************************************************************/
-    public static void initMobile(){
-        System.out.println("Mobile platform *********************************");
+    public static void initMobile() {
+        dc.setCapability(MobileCapabilityType.UDID, getData("UUID"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, getData("AppPackage"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, getData("AppActivity"));
+        try {
+            mobileDriver = new AndroidDriver(new URL(getData("AppiumServer")), dc);
+        }catch (Exception e){
+            System.out.println("Initialization of Appium Driver fail with error: " + e);
+        }
+        mobileDriver.manage().timeouts().implicitlyWait(Long.parseLong(getData("Timeout")), TimeUnit.SECONDS);
+        wait = new WebDriverWait(mobileDriver,Long.parseLong(getData("Timeout")));
+
     }
 
     /**************************************************************

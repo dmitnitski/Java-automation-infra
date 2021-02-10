@@ -1,5 +1,6 @@
 package utilities;
 
+import io.appium.java_client.AppiumDriver;
 import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
@@ -54,6 +55,7 @@ public class Base {
 
     //Mobile
     protected static DesiredCapabilities dc = new DesiredCapabilities();
+    protected static AppiumDriver mobileDriver;
 
     //Page Objects electron
     protected static pageObjects.todo.TodoMain todoMain;
