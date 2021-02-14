@@ -131,16 +131,18 @@ public class CommonOps extends Base{
      * Description: init mobile driver for mobile manipulations
      **************************************************************/
     public static void initMobile() {
-        dc.setCapability(MobileCapabilityType.UDID, getData("UUID"));
-        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, getData("AppPackage"));
-        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, getData("AppActivity"));
+        dc.setCapability(MobileCapabilityType.UDID, ("2b744bc0c51c7ece"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, ("com.shivgadhia.android.ukMortgageCalc"));
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, (".MainActivity"));
         try {
-            mobileDriver = new AndroidDriver(new URL(getData("AppiumServer")), dc);
+            mobileDriver = new AndroidDriver(new URL("http://localhost:4724/wd/hub"), dc);
         }catch (Exception e){
             System.out.println("Initialization of Appium Driver fail with error: " + e);
         }
+
         mobileDriver.manage().timeouts().implicitlyWait(Long.parseLong(getData("Timeout")), TimeUnit.SECONDS);
         wait = new WebDriverWait(mobileDriver,Long.parseLong(getData("Timeout")));
+        ManagePages.initMortgage();
 
     }
 
@@ -205,7 +207,12 @@ public class CommonOps extends Base{
         softAssert = new SoftAssert();
 
         if(!platform.equalsIgnoreCase("desktop") & !platform.equalsIgnoreCase("api")){
-            actions = new Actions(driver);
+            if(platform.equalsIgnoreCase("mobile")){
+                actions = new Actions(mobileDriver);
+            }
+            else{
+                actions = new Actions(driver);
+            }
         }
         ManageDB.openConnection(getData("DBUrl"), getData("DBusername"), getData("DBpasword"));
     }
@@ -215,6 +222,9 @@ public class CommonOps extends Base{
         if(!platform.equalsIgnoreCase("api")) {
             if (driver != null) {
                 driver.quit();
+            }
+            if(mobileDriver != null){
+                mobileDriver.quit();
             }
         }
 //        ManageDB.closeConnection();
@@ -231,7 +241,7 @@ public class CommonOps extends Base{
 
     @BeforeMethod
     public static void beforeMethod(Method method){
-        if(platform.equalsIgnoreCase("api")){
+        if(!platform.equalsIgnoreCase("api")){
             try {
                 MonteScreenRecorder.startRecord(method.getName());
             }

@@ -7,7 +7,7 @@
     <test name="Mobile test">
         <parameter name="PlatformName" value="mobile"></parameter>
         <classes>
-            <class name="sanity.GrafanaApi">
+            <class name="sanity.MortgageMobile">
 <!--                <methods>-->
 <!--                    <exclude name="test05_verifyProgressSteps"/>-->
 <!--                    <exclude name="test06_searchUsers"/>-->

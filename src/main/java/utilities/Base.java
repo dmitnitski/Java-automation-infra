@@ -4,17 +4,16 @@ import io.appium.java_client.AppiumDriver;
 import io.restassured.path.json.JsonPath;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import pageObjects.calculator.CalcMainPage;
 import pageObjects.grafana.*;
-import pageObjects.todo.TodoMain;
+import pageObjects.mortgage.*;
+
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -56,6 +55,7 @@ public class Base {
     //Mobile
     protected static DesiredCapabilities dc = new DesiredCapabilities();
     protected static AppiumDriver mobileDriver;
+    protected static MortgageMain mortgageMain;
 
     //Page Objects electron
     protected static pageObjects.todo.TodoMain todoMain;

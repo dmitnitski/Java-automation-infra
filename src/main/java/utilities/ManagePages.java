@@ -3,6 +3,7 @@ package utilities;
 import org.openqa.selenium.support.PageFactory;
 import pageObjects.calculator.CalcMainPage;
 import pageObjects.grafana.*;
+import pageObjects.mortgage.MortgageMain;
 import pageObjects.todo.TodoMain;
 
 public class ManagePages extends Base{
@@ -14,6 +15,9 @@ public class ManagePages extends Base{
         grafanaServerAdminMain = PageFactory.initElements(driver, ServerAdminMainPage.class);
         grafanaAddNewUser = PageFactory.initElements(driver, AddNewUserPage.class);
         grafanaEditUserPage = PageFactory.initElements(driver, EditUserPage.class);
+    }
+    public static void initMortgage(){
+        mortgageMain = new MortgageMain(mobileDriver);
     }
 
     public static void initTodo(){
