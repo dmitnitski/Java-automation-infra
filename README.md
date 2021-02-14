@@ -41,6 +41,7 @@ The project is an example of infrastructure for automation testing of different 
 * Grafana API - Web API
 * Electron application
 * Windows calculator - Desktop application
+*Appium Studio
 
 ### _Tools & Frameworks used in the project:_
 * TestNG - Testing Framework
