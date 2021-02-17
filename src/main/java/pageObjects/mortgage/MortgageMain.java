@@ -19,18 +19,41 @@ public class MortgageMain {
     }
 
     @AndroidFindBy(id = "etAmount")
-    public AndroidElement txt_amount;
+    private AndroidElement txt_amount;
 
     @AndroidFindBy(id = "etTerm")
-    public AndroidElement txt_term;
+    private AndroidElement txt_term;
 
     @AndroidFindBy(id = "etRate")
-    public AndroidElement txt_rate;
+    private AndroidElement txt_rate;
 
     @AndroidFindBy(id = "btnCalculate")
-    public AndroidElement txt_calculate;
+    private AndroidElement txt_calculate;
 
     @AndroidFindBy(id = "tvRepayment")
-    public AndroidElement txt_repayment;
+    private AndroidElement txt_repayment;
 
+    public AppiumDriver getMobileDriver() {
+        return mobileDriver;
+    }
+
+    public AndroidElement getTxt_amount() {
+        return txt_amount;
+    }
+
+    public AndroidElement getTxt_term() {
+        return txt_term;
+    }
+
+    public AndroidElement getTxt_rate() {
+        return txt_rate;
+    }
+
+    public AndroidElement getTxt_calculate() {
+        return txt_calculate;
+    }
+
+    public AndroidElement getTxt_repayment() {
+        return txt_repayment;
+    }
 }

@@ -5,20 +5,37 @@ import org.openqa.selenium.support.FindBy;
 
 public class AddNewUserPage {
     @FindBy(css = "input[ng-model='user.name']")
-    public WebElement userName;
+    private WebElement userName;
 
     @FindBy(css = "input[ng-model='user.email']")
-    public WebElement userMail;
+    private WebElement userMail;
 
     @FindBy(css = "input[ng-model='user.login']")
-    public WebElement userLogin;
+    private WebElement userLogin;
 
     @FindBy(css = "input[ng-model='user.password']")
-    public WebElement userPassword;
-
+    private WebElement userPassword;
 
     @FindBy(css = "button[class='btn btn-primary']")
-    public WebElement submit;
+    private WebElement submit;
 
+    public WebElement getUserName() {
+        return userName;
+    }
 
+    public WebElement getUserMail() {
+        return userMail;
+    }
+
+    public WebElement getUserLogin() {
+        return userLogin;
+    }
+
+    public WebElement getUserPassword() {
+        return userPassword;
+    }
+
+    public WebElement getSubmit() {
+        return submit;
+    }
 }

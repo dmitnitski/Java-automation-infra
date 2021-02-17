@@ -7,12 +7,23 @@ import java.util.List;
 
 public class TodoMain {
     @FindBy(css = "input[placeholder='Create a task']")
-    public WebElement create;
+    private WebElement create;
 
     @FindBy(className = "taskWrapper_2u8dN")
-    public List<WebElement> list_tasks;
+    private List<WebElement> list_tasks;
 
     @FindBy(className = "destroy_19w1q")
-    public WebElement btn_x;
+    private WebElement btn_x;
 
+    public WebElement getCreate() {
+        return create;
+    }
+
+    public List<WebElement> getList_tasks() {
+        return list_tasks;
+    }
+
+    public WebElement getBtn_x() {
+        return btn_x;
+    }
 }

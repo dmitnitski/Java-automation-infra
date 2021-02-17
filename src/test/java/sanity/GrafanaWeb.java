@@ -17,7 +17,7 @@ public class GrafanaWeb extends CommonOps {
     @Description("this test verify login and main header")
     public void test01_verifyHaeder() {
         WebFlows.login("admin", "admin");
-        Verifications.verifyTextInElement(grafanaMain.head_Dash, "Home Dashboard");
+        Verifications.verifyTextInElement(grafanaMain.getHead_Dash(), "Home Dashboard");
         WebFlows.openServerAdmin();
     }
 
@@ -25,7 +25,7 @@ public class GrafanaWeb extends CommonOps {
     @Description("this test verify default users")
     public void test02_verifyUsers() {
         WebFlows.openServerAdmin();
-        Verifications.numberOfElements(grafanaServerAdminMain.rows, 1);
+        Verifications.numberOfElements(grafanaServerAdminMain.getRows(), 1);
     }
 
     @Test(description = "Test03 verify add user")
@@ -33,7 +33,7 @@ public class GrafanaWeb extends CommonOps {
     public void test03_addNewUser() {
         WebFlows.openServerAdmin();
         WebFlows.createNewUser("Dima", "dmitnitzki@aternity.com", "Dimam", "123456");
-        Verifications.numberOfElements(grafanaServerAdminMain.rows, 2);
+        Verifications.numberOfElements(grafanaServerAdminMain.getRows(), 2);
     }
 
     @Test(description = "Test04 verify delete user")
@@ -41,13 +41,13 @@ public class GrafanaWeb extends CommonOps {
     public void test04_verifyUserDeleted() {
         WebFlows.openServerAdmin();
         WebFlows.deleteUser("dimam");
-        Verifications.numberOfElements(grafanaServerAdminMain.rows, 1);
+        Verifications.numberOfElements(grafanaServerAdminMain.getRows(), 1);
     }
 
     @Test(description = "Test05 progress steps")
     @Description("this test verify progress steps")
     public void test05_verifyProgressSteps() {
-        Verifications.visibilityOfElements(grafanaMain.list_progressSteps);
+        Verifications.visibilityOfElements(grafanaMain.getList_progressSteps());
         WebFlows.openServerAdmin();
         WebFlows.createNewUser("Dima", "a@gmail.com","dima", "12345");
     }

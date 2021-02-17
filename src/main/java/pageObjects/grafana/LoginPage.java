@@ -5,14 +5,30 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
     @FindBy(name = "user")
-    public WebElement userName;
+    private WebElement userName;
 
     @FindBy(id = "inputPassword")
-    public WebElement pasw;
+    private WebElement pasw;
 
     @FindBy(xpath = "//button[@aria-label='Login button']")
-    public WebElement btn_submit;
+    private WebElement btn_submit;
 
     @FindBy(css = "a[class='btn btn-link']")
-    public WebElement btn_skip;
+    private WebElement btn_skip;
+
+    public WebElement getUserName() {
+        return userName;
+    }
+
+    public WebElement getPasw() {
+        return pasw;
+    }
+
+    public WebElement getBtn_submit() {
+        return btn_submit;
+    }
+
+    public WebElement getBtn_skip() {
+        return btn_skip;
+    }
 }

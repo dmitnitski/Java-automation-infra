@@ -5,8 +5,16 @@ import org.openqa.selenium.support.FindBy;
 
 public class EditUserPage {
     @FindBy(css = "button[ng-click='deleteUser(user)']")
-    public WebElement btn_delete;
+    private WebElement btn_delete;
 
     @FindBy(css = "button[ng-show='onConfirm']")
-    public WebElement btn_confirmDeleteUser;
+    private WebElement btn_confirmDeleteUser;
+
+    public WebElement getBtn_delete() {
+        return btn_delete;
+    }
+
+    public WebElement getBtn_confirmDeleteUser() {
+        return btn_confirmDeleteUser;
+    }
 }

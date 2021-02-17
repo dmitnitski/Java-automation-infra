@@ -7,10 +7,16 @@ import java.util.List;
 
 public class MainPage {
     @FindBy(xpath = "//div[@class='text-center dashboard-header']/span")
-    public WebElement head_Dash;
+    private WebElement head_Dash;
 
     @FindBy(xpath = "//div[@class='progress-step active']")
-    public List<WebElement> list_progressSteps;
+    private List<WebElement> list_progressSteps;
 
+    public WebElement getHead_Dash() {
+        return head_Dash;
+    }
 
+    public List<WebElement> getList_progressSteps() {
+        return list_progressSteps;
+    }
 }
